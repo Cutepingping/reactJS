@@ -1,5 +1,4 @@
 # reactJS
-<hr/>
 This is my reactJS's learning mark.It contains all my demos about reactJS
 ## HTML模板
   使用React的网页源码，结构大致如下：
@@ -38,7 +37,7 @@ This is my reactJS's learning mark.It contains all my demos about reactJS
 ## ReactDOM.render()
   ReactDOM.render()是React的最基本方法，用于将模板转为html语言，并插入指定的DOM节点</br>
   ReactDOM.render(
-    /<h1>Hello, world!</h1>,
+    <h1>Hello, world!</h1>,
     document.getElementById('example')
   );
   
