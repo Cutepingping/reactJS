@@ -23,11 +23,11 @@ This is my reactJS's learning mark.It contains all my demos about reactJS
   
 ## Index
 [1  Render JSX ](跳转网址)<br>
-[2  Use JavaScript in JSX ](跳转网址)<br>
-[3  Use array in JSX](跳转网址)<br>
-[4  Define a component](跳转网址)<br>
-[5  this.props.children](跳转网址)<br>
-[6  PropTypes](跳转网址)<br>
+[2  Use JavaScript in JSX ](https://github.com/Cutepingping/reactJS/blob/master/primary/index01.html)<br>
+[3  Use array in JSX](https://github.com/Cutepingping/reactJS/blob/master/primary/index02.html)<br>
+[4  Define a component](https://github.com/Cutepingping/reactJS/blob/master/primary/index03.html)<br>
+[5  this.props.children](https://github.com/Cutepingping/reactJS/blob/master/primary/index04.html)<br>
+[6  PropTypes](https://github.com/Cutepingping/reactJS/blob/master/primary/index05.html)<br>
 [7  Finding a DOM node](跳转网址)<br>
 [8  this.state](跳转网址)<br>
 [9  Form](跳转网址)<br>
