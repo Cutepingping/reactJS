@@ -193,3 +193,27 @@ ReactDOM.render(
   document.body
 );
 ```
+## 获取真实的DOM节点
+  组件并不是真实的DOM节点，而是存在于内存之中的一种数据结构，叫做虚拟DOM。只有当它插入文档以后，才会变成真实的DOM。根据React的实际，所有的DOM变动，都会现在虚拟DOM发生，然后在将实际发生变动的部分，坟茔在真实DOM上，这种算法叫做[DOM diff](https://calendar.perfplanet.com/2013/diff/)。可以极大提高网页的性能表现.
+  
+``` 
+var MyComponent =React.createClass({
+  handleClick: function(){
+    this.refs.mTextInput.focus();
+  },
+  render: function(){
+    return (
+      <div>
+        <input type ="text" ref="myTextInput" />
+        <input type = "button" value="Focus the text input" onclick={this.handleClick} />
+      </div>
+    );
+  }
+ });
+  RenderDOM.render(
+    <MyComponent />,
+    document.getElementById('example')
+  );
+ ```
+ 上面代码中，组件MyComponent的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的DOM节点，虚拟DOM是拿不到用户输入的。为了做到这一点，文本输入框必须有一个ref属性。然后this.refs.[refName]就会返回这个真实的DOM节点。
+  需要注意的是，由于this.refs.[refName]属性获取的是DOM，所以必须等到虚拟DOM插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定Click事件的回调函数，确保了只有等到真实DOM发生Click事件以后，才能读取this.refs.[refName]属性。
